@@ -197,6 +197,6 @@ Return #f if the build log is not found."
       (let* ((derivation (package-derivation store package))
              (file       (derivation-file-name derivation)))
         (or (log-file store file)
-            ((@@ (guix scripts build) log-url) store file))))))
+            (log-url store file))))))
 
 ;;; actions.scm ends here
